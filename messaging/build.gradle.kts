@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.plugin.serialization)
 }
 
 android {
@@ -36,6 +35,10 @@ dependencies {
     implementation(projects.core)
     implementation(projects.localStorage)
 
+    implementation(projects.messaging.data)
+    implementation(projects.messaging.domain)
+    implementation(projects.messaging.ui)
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity.compose)
@@ -53,13 +56,6 @@ dependencies {
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
-    implementation(libs.firebase.messaging)
-
-    implementation(libs.coil.compose)
-    implementation(libs.coil.network)
-
-    implementation(libs.androidx.navigation3.ui)
-    implementation(libs.androidx.navigation3.runtime)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
     testImplementation(libs.junit)
