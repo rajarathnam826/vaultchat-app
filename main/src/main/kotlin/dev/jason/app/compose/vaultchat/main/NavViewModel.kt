@@ -6,6 +6,8 @@ import androidx.lifecycle.viewModelScope
 import dev.jason.app.compose.vaultchat.core.AppEvent
 import dev.jason.app.compose.vaultchat.core.AppEvents
 import dev.jason.app.compose.vaultchat.core.AppState
+import dev.jason.app.compose.vaultchat.core.updateIsOtherUserConnected
+import dev.jason.app.compose.vaultchat.core.updateOtherUser
 import dev.jason.app.compose.vaultchat.core.model.user.toUi
 import dev.jason.app.compose.vaultchat.main.ui.Route
 import kotlinx.coroutines.launch

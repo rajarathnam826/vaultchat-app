@@ -13,6 +13,8 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import dev.jason.app.compose.vaultchat.core.AppState
+import dev.jason.app.compose.vaultchat.core.updateIsOtherUserConnected
+import dev.jason.app.compose.vaultchat.core.updateOtherUser
 import dev.jason.app.compose.vaultchat.feature.messaging.ui.MessagingScreen
 import dev.jason.app.compose.vaultchat.feature.profile.ui.ProfileScreen
 

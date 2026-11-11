@@ -22,6 +22,8 @@ import dev.jason.app.compose.vaultchat.core.AppConstants.EXTRA_KEY_OTHER_USER
 import dev.jason.app.compose.vaultchat.core.AppEvent
 import dev.jason.app.compose.vaultchat.core.AppEvents
 import dev.jason.app.compose.vaultchat.core.AppState
+import dev.jason.app.compose.vaultchat.core.deviceOffline
+import dev.jason.app.compose.vaultchat.core.deviceOnline
 import dev.jason.app.compose.vaultchat.core.model.user.User
 import dev.jason.app.compose.vaultchat.core.ui.theme.VaultChatTheme
 import dev.jason.app.compose.vaultchat.feature.messaging.domain.MessagingService

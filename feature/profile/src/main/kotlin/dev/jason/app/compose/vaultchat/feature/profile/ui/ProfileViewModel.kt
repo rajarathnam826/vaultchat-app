@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import dev.jason.app.compose.vaultchat.core.AppEvent
 import dev.jason.app.compose.vaultchat.core.AppEvents
 import dev.jason.app.compose.vaultchat.core.AppState
+import dev.jason.app.compose.vaultchat.core.updateIsOtherUserBlocked
 import dev.jason.app.compose.vaultchat.core.model.device.Device
 import dev.jason.app.compose.vaultchat.core.model.device.DeviceUi
 import dev.jason.app.compose.vaultchat.core.model.device.toUi

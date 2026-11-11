@@ -29,6 +29,8 @@ import dev.jason.app.compose.vaultchat.core.AppConstants.ACTION_START_MAIN_ACTIV
 import dev.jason.app.compose.vaultchat.core.AppConstants.EVENT
 import dev.jason.app.compose.vaultchat.core.AppConstants.EVENT_LAUNCH_FROM_AUTH_ACTIVITY
 import dev.jason.app.compose.vaultchat.core.AppState
+import dev.jason.app.compose.vaultchat.core.updateCurrentDevice
+import dev.jason.app.compose.vaultchat.core.updateCurrentUser
 import dev.jason.app.compose.vaultchat.core.model.device.Device
 import dev.jason.app.compose.vaultchat.core.model.user.User
 import dev.jason.app.compose.vaultchat.core.ui.LoadingIndicator

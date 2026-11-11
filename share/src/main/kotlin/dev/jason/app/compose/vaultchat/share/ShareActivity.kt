@@ -36,6 +36,7 @@ import dev.jason.app.compose.vaultchat.core.AppConstants.EXTRA_KEY_OTHER_USER
 import dev.jason.app.compose.vaultchat.core.AppConstants.TEXT_PLAIN
 import dev.jason.app.compose.vaultchat.core.AppConstants.defaultUsers
 import dev.jason.app.compose.vaultchat.core.AppState
+import dev.jason.app.compose.vaultchat.core.updateOtherUser
 import dev.jason.app.compose.vaultchat.core.ToastController
 import dev.jason.app.compose.vaultchat.core.model.message.Message
 import dev.jason.app.compose.vaultchat.core.model.user.User

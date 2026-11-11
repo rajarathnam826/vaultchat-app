@@ -7,6 +7,8 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
 import dev.jason.app.compose.vaultchat.core.AppConstants.BASE_HTTP_URL
 import dev.jason.app.compose.vaultchat.core.AppState
+import dev.jason.app.compose.vaultchat.core.updateCurrentDevice
+import dev.jason.app.compose.vaultchat.core.updateCurrentUser
 import dev.jason.app.compose.vaultchat.core.model.device.Device
 import dev.jason.app.compose.vaultchat.core.model.user.RegisterUserDto
 import dev.jason.app.compose.vaultchat.core.model.user.User

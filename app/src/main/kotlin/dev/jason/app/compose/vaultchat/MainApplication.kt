@@ -5,6 +5,8 @@ import android.app.Application
 import android.os.Bundle
 import androidx.datastore.preferences.preferencesDataStore
 import dev.jason.app.compose.vaultchat.core.AppState
+import dev.jason.app.compose.vaultchat.core.appInBackground
+import dev.jason.app.compose.vaultchat.core.appInForeground
 import dev.jason.app.compose.vaultchat.core.coreModule
 import dev.jason.app.compose.vaultchat.core.notifications.MessagesNotificationChannel
 import dev.jason.app.compose.vaultchat.feature.auth.ui.authModule
