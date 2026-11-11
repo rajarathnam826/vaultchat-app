@@ -34,6 +34,7 @@ import dev.jason.app.compose.vaultchat.core.AppConstants.EVENT
 import dev.jason.app.compose.vaultchat.core.AppConstants.EVENT_LAUNCH_FROM_SHARE_ACTIVITY
 import dev.jason.app.compose.vaultchat.core.AppConstants.EXTRA_KEY_OTHER_USER
 import dev.jason.app.compose.vaultchat.core.AppConstants.TEXT_PLAIN
+import dev.jason.app.compose.vaultchat.core.AppConstants.defaultUsers
 import dev.jason.app.compose.vaultchat.core.AppState
 import dev.jason.app.compose.vaultchat.core.ToastController
 import dev.jason.app.compose.vaultchat.core.model.message.Message
@@ -182,22 +183,8 @@ private fun ShareScreen(
 private fun ShareScreenPreview() {
     VaultChatTheme {
         ShareScreen(
-            connections = List(10) { index ->
-                UserUi(
-                    uid = "user @$index",
-                    displayName = "Name @$index",
-                    profilePictureUrl = "url",
-                    status = User.Status.Online
-                )
-            }.toImmutableList(),
-            selectedUsers = List(5) { index ->
-                UserUi(
-                    uid = "user @$index",
-                    displayName = "Name @$index",
-                    profilePictureUrl = "url",
-                    status = User.Status.Online
-                )
-            }.toImmutableList(),
+            connections = defaultUsers,
+            selectedUsers = defaultUsers.subList(5, 10),
             onUserItemClick = { },
             innerPadding = PaddingValues()
         )

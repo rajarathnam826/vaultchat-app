@@ -37,6 +37,7 @@ import dev.jason.app.compose.vaultchat.feature.auth.ui.AuthScreen
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.time.LocalDateTime
 
 
 class AuthActivity : ComponentActivity() {
@@ -93,7 +94,8 @@ class AuthActivity : ComponentActivity() {
                         uid = "CKu3zhKID9NRisxkUmrWoczAYts1",
                         displayName = "Jason Augustine",
                         profilePictureUrl = "https://lh3.googleusercontent.com/a/ACg8ocKMNmv5uWm3KG4enNW4KQUFtUh6xDxsxgcAXJZKx5ivTpCFErH5",
-                        status = User.Status.Offline
+                        status = User.Status.Offline,
+                        lastSeen = LocalDateTime.now()
                     )
 
                     val currentDevice =
@@ -141,6 +143,7 @@ class AuthActivity : ComponentActivity() {
             uid,
             displayName!!,
             photoUrl.toString().removeSuffix("=s96-c"),
-            User.Status.Online
+            User.Status.Online,
+            LocalDateTime.now()
         )
 }

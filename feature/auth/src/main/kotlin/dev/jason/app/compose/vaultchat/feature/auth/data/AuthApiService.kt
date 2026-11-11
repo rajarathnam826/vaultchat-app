@@ -16,6 +16,7 @@ import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import kotlinx.serialization.json.Json
+import java.time.LocalDateTime
 
 class AuthApiService(
     private val context: Context,
@@ -31,7 +32,8 @@ class AuthApiService(
             uid = firebaseUser.uid,
             displayName = firebaseUser.displayName!!,
             profilePictureUrl = firebaseUser.photoUrl?.toString()?.removeSuffix("=s96-c")!!,
-            status = User.Status.Online
+            status = User.Status.Online,
+            lastSeen = LocalDateTime.now()
         )
 
         httpClient.post("$BASE_HTTP_URL/register") {

@@ -25,6 +25,7 @@ import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.flow.flowOf
 import org.koin.androidx.compose.koinViewModel
+import java.time.LocalDateTime
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
@@ -109,7 +110,7 @@ private fun MessagingScreenPreview() {
 
     VaultChatTheme {
         MessagingScreen(
-            otherUser = UserUi(other, other, other, User.Status.Online),
+            otherUser = UserUi(other, other, other, User.Status.Online, LocalDateTime.now()),
             onBackClick = {},
             uiState = MessagingUiState(),
             onAction = {},

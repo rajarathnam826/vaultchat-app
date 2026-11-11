@@ -26,9 +26,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import dev.jason.app.compose.vaultchat.core.model.user.User
 import dev.jason.app.compose.vaultchat.core.model.user.UserUi
 import dev.jason.app.compose.vaultchat.core.ui.LoadProfilePicture
 import dev.jason.app.compose.vaultchat.feature.messaging.R
+import java.time.format.DateTimeFormatter.ofPattern
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -58,10 +60,16 @@ internal fun MessagingScreenTopBar(
                 Column {
                     Text(otherUser.displayName)
                     Text(
-                        text = if (isOffline) stringResource(R.string.you_are_offline) else stringResource(
-                            R.string.user_status_display_text,
-                            otherUser.status.toString().lowercase()
-                        ),
+                        text = when {
+                            isOffline -> stringResource(R.string.you_are_offline)
+                            otherUser.status == User.Status.Online -> stringResource(R.string.user_status_online_display_text)
+                            otherUser.status == User.Status.Offline -> stringResource(
+                                R.string.user_status_offline_display_text,
+                                otherUser.lastSeen.format(ofPattern("dd/MM/yyyy hh:mm a"))
+                            )
+
+                            else -> throw IllegalStateException()
+                        },
                         fontSize = 12.sp
                     )
                 }

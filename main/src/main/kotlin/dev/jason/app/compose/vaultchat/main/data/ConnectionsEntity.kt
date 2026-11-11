@@ -3,6 +3,7 @@ package dev.jason.app.compose.vaultchat.main.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import dev.jason.app.compose.vaultchat.core.model.user.User
+import java.time.LocalDateTime
 
 @Entity(tableName = "connections")
 data class ConnectionsEntity(
@@ -10,8 +11,9 @@ data class ConnectionsEntity(
     val id: String,
     val displayName: String,
     val profilePictureUrl: String,
-    val status: User.Status
+    val status: User.Status,
+    val lastSeen: String
 )
 
-fun User.toEntity() = ConnectionsEntity(uid, displayName!!, profilePictureUrl!!, status!!)
-fun ConnectionsEntity.toUser() = User(id, displayName, profilePictureUrl, status)
+fun User.toEntity() = ConnectionsEntity(uid, displayName, profilePictureUrl, status, lastSeen.toString())
+fun ConnectionsEntity.toUser() = User(id, displayName, profilePictureUrl, status, LocalDateTime.parse(lastSeen))

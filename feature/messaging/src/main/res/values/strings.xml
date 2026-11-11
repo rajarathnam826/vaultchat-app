@@ -2,5 +2,6 @@
 <resources>
     <string name="user_blocked_warning">You have blocked this user</string>
     <string name="you_are_offline">You are offline</string>
-    <string name="user_status_display_text">User currently %1$s</string>
+    <string name="user_status_online_display_text">User online</string>
+    <string name="user_status_offline_display_text">Last seen at %1$s</string>
 </resources>

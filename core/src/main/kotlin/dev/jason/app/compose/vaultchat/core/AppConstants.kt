@@ -5,10 +5,11 @@ import dev.jason.app.compose.vaultchat.core.model.device.DeviceUi
 import dev.jason.app.compose.vaultchat.core.model.user.User
 import dev.jason.app.compose.vaultchat.core.model.user.UserUi
 import kotlinx.collections.immutable.toImmutableList
+import java.time.LocalDateTime
 
 object AppConstants {
 
-    const val URL_HOST = "127.0.0.1:8080"
+    const val URL_HOST = "10.0.2.2:8080"
     const val BASE_HTTP_URL = "http://$URL_HOST"
     const val BASE_WS_URL = "ws://$URL_HOST"
 //    const val BASE_URL = "https://vaultchat-67jk.onrender.com"
@@ -25,6 +26,9 @@ object AppConstants {
     const val EVENT_LAUNCH_FROM_AUTH_ACTIVITY = "launch_from_auth_activity"
     const val EVENT_LAUNCH_FROM_SHARE_ACTIVITY = "EVENT_LAUNCH_FROM_SHARE_ACTIVITY"
 
+    /**
+     * List of 10 example devices
+     */
     val defaultDevices = List(10) { index ->
         DeviceUi(
             ownerUid = "owner",
@@ -35,12 +39,16 @@ object AppConstants {
         )
     }.toImmutableList()
 
+    /**
+     * List of 20 example users
+     */
     val defaultUsers = List(20) { index ->
         UserUi(
             uid = "uid-$index",
             displayName = "User @$index",
             profilePictureUrl = "url @$index",
-            status = User.Status.Online
+            status = User.Status.Online,
+            lastSeen = LocalDateTime.now()
         )
     }.toImmutableList()
 }
